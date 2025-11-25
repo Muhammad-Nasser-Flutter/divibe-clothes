@@ -47,15 +47,16 @@ class CartItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Product Image
-          Container(
+          SizedBox(
             height: double.maxFinite,
-            width: 80,
-            decoration: BoxDecoration(
+            width: 90,
+            child: ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              color: AppColors.gray100,
-              image: DecorationImage(
-                image: CachedNetworkImageProvider(item.product.imageUrl),
+              child: CachedNetworkImage(
+                imageUrl: item.product.imageUrl,
                 fit: BoxFit.cover,
+                width: double.maxFinite,
+                height: double.maxFinite,
               ),
             ),
           ),

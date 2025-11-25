@@ -7,7 +7,7 @@ class HoverBlurOverlay extends HookWidget {
     super.key,
     required this.child,
     required this.overlayWidget,
-    this.blurAmount = 0.5,
+    this.blurAmount = 1,
     this.duration = const Duration(milliseconds: 500),
   });
 

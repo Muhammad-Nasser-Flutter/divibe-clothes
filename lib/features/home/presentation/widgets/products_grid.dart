@@ -1,5 +1,6 @@
 import 'package:cloth_ecommerce/core/widgets/custom_elevated_button.dart';
 import 'package:cloth_ecommerce/core/widgets/el_mostashfa_loading.dart';
+import 'package:cloth_ecommerce/core/widgets/fade_in_widget.dart';
 import 'package:cloth_ecommerce/features/home/data/models/product_model.dart';
 import 'package:cloth_ecommerce/features/home/presentation/providers/products_provider.dart';
 import 'package:cloth_ecommerce/features/home/presentation/widgets/product_card.dart';
@@ -44,10 +45,14 @@ class ProductsGrid extends ConsumerWidget {
             itemCount: products.length,
             itemBuilder: (context, index) {
               final product = products[index];
-              return ProductCard(
-                key: ValueKey(product.id),
-                product: product,
-                scaffoldKey: scaffoldKey,
+              return FadeInWidget(
+                offsetFromValue: const Offset(0, 50),
+                duration: Duration(milliseconds: 400 + (index ~/ 4) * 200 + (index % 4) * 100),
+                child: ProductCard(
+                  key: ValueKey(product.id),
+                  product: product,
+                  scaffoldKey: scaffoldKey,
+                ),
               );
             },
           ),

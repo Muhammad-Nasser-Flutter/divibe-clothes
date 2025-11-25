@@ -3,6 +3,8 @@ import 'package:cloth_ecommerce/core/widgets/animatable_icon.dart';
 import 'package:cloth_ecommerce/core/widgets/separator.dart';
 import 'package:cloth_ecommerce/features/cart/bloc/cart_bloc.dart';
 import 'package:cloth_ecommerce/features/cart/presentation/widgets/cart_drawer.dart';
+import 'package:cloth_ecommerce/features/home/presentation/providers/search_ui_provider.dart';
+import 'package:cloth_ecommerce/features/home/presentation/widgets/search_results_overlay.dart';
 import 'package:flutter/material.dart';
 import 'package:cloth_ecommerce/core/theming/colors.dart';
 import 'package:cloth_ecommerce/features/home/presentation/widgets/custom_app_bar.dart';
@@ -38,52 +40,71 @@ class HomeScreen extends HookWidget {
           builder: (context, ref, child) {
             // final selectedCategory = ref.watch(selectedCategoryProvider);
 
-            return SingleChildScrollView(
-              controller: scrollController,
-              padding: const EdgeInsets.symmetric(horizontal: 140),
-              child: Column(
-                children: [
-                  // Hero Section
-                  RepaintBoundary(
-                    child: ColoredBox(
-                      color: AppColors.containerWhite,
-                      child: Column(
-                        children: [
-                          const HeroSection(),
+            final isSearchOpen = ref.watch(isSearchOpenProvider);
 
-                          // Stats Section
-                          const StatsSection(),
-                          20.height,
-                          const AnimatableIcon(
-                            startOffset: Offset(0, 0),
-                            endOffset: Offset(0, -10),
-                            child: Iconify(
-                              Gg.mouse,
-                              color: AppColors.gray600,
-                              size: 30,
-                            ),
+            return Stack(
+              children: [
+                SingleChildScrollView(
+                  controller: scrollController,
+                  padding: const EdgeInsets.symmetric(horizontal: 140),
+                  child: Column(
+                    children: [
+                      // Hero Section
+                      RepaintBoundary(
+                        child: ColoredBox(
+                          color: AppColors.containerWhite,
+                          child: Column(
+                            children: [
+                              const HeroSection(),
+
+                              // Stats Section
+                              const StatsSection(),
+                              20.height,
+                              const AnimatableIcon(
+                                startOffset: Offset(0, 0),
+                                endOffset: Offset(0, -10),
+                                child: Iconify(
+                                  Gg.mouse,
+                                  color: AppColors.gray600,
+                                  size: 30,
+                                ),
+                              ),
+                              20.height,
+                            ],
                           ),
-                          20.height,
-                        ],
+                        ),
                       ),
+
+                      Separator(
+                        color: Colors.grey.shade100,
+                      ),
+
+                      const SizedBox(height: 50),
+
+                      // Products Section
+                      ProductsSection(
+                        key: productsKey,
+                        scaffoldKey: scaffoldKey,
+                      ),
+
+                      const SizedBox(height: 40),
+                    ],
+                  ),
+                ),
+
+                // Search Results Overlay
+                if (isSearchOpen)
+                  Positioned(
+                    top: 0,
+                    // left: 0,
+                    right: 124,
+                    child: Container(
+                      width: 400,
+                      margin: const EdgeInsets.symmetric(horizontal: 140),
+                      child: const SearchResultsOverlay(),
                     ),
                   ),
-
-                  Separator(
-                    color: Colors.grey.shade100,
-                  ),
-
-                  const SizedBox(height: 50),
-
-                  // Products Section
-                  ProductsSection(
-                    key: productsKey,
-                    scaffoldKey: scaffoldKey,
-                  ),
-
-                  const SizedBox(height: 40),
-                ],
-              ),
+              ],
             );
           },
         ),

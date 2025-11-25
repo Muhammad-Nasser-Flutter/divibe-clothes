@@ -1,3 +1,4 @@
+import 'package:cloth_ecommerce/core/widgets/loading_wrapper.dart';
 import 'package:cloth_ecommerce/features/home/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -14,7 +15,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: Routes.homeRoute,
       name: Routes.homeRoute,
-      pageBuilder: (context, state) => buildAnimatedPage(HomeScreen()),
+      pageBuilder: (context, state) => buildAnimatedPage(LoadingWrapper(child: HomeScreen())),
     ),
     // ShellRoute(
     //   builder: (context, state, child) {

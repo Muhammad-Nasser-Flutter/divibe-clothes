@@ -1,4 +1,5 @@
 import 'package:cloth_ecommerce/core/theming/text_theme_extension.dart';
+import 'package:cloth_ecommerce/core/widgets/fade_in_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:cloth_ecommerce/core/theming/colors.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
@@ -15,20 +16,33 @@ class StatsSection extends StatelessWidget {
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          StatsWidget(
-            value: '500+',
-            label: 'Products',
+          FadeInWidget(
+            offsetFromValue: Offset(0, 50),
+            duration: Duration(milliseconds: 1500),
+
+            child: StatsWidget(
+              value: '500+',
+              label: 'Products',
+            ),
           ),
-          StatsWidget(
-            value: '10K+',
-            label: 'Happy Customers',
+          FadeInWidget(
+            offsetFromValue: Offset(0, 50),
+            duration: Duration(milliseconds: 2000),
+            child: StatsWidget(
+              value: '10K+',
+              label: 'Happy Customers',
+            ),
           ),
-          StatsWidget(
-            value: '4.9',
-            label: 'Reviews',
-            suffixIcon: Iconify(
-              Ph.star_fill,
-              size: 30,
+          FadeInWidget(
+            offsetFromValue: Offset(0, 50),
+            duration: Duration(milliseconds: 2500),
+            child: StatsWidget(
+              value: '4.9',
+              label: 'Reviews',
+              suffixIcon: Iconify(
+                Ph.star_fill,
+                size: 30,
+              ),
             ),
           ),
         ],

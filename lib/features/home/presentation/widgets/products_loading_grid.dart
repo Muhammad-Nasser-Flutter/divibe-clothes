@@ -1,4 +1,5 @@
 import 'package:cloth_ecommerce/core/constants/product_constants.dart';
+import 'package:cloth_ecommerce/core/widgets/fade_in_widget.dart';
 import 'package:cloth_ecommerce/core/widgets/skeletonizer_widget.dart';
 import 'package:cloth_ecommerce/features/home/presentation/widgets/product_card.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class ProductsLoadingGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Get sample products for skeleton loading
-    final sampleProducts = ProductConstants.getSampleProducts().take(4).toList();
+    final sampleProducts = ProductConstants.getSampleProducts().take(8).toList();
 
     return SkeletonizerWidget(
       isLoading: true,
@@ -34,9 +35,14 @@ class ProductsLoadingGrid extends StatelessWidget {
           ),
           itemCount: sampleProducts.length,
           itemBuilder: (context, index) {
-            return ProductCard(
-              product: sampleProducts[index],
-              scaffoldKey: scaffoldKey,
+            return FadeInWidget(
+              offsetFromValue: const Offset(0, 50),
+              duration: Duration(milliseconds: 500 + (index * 200)),
+              child: ProductCard(
+                key: ValueKey(sampleProducts[index].id),
+                product: sampleProducts[index],
+                scaffoldKey: scaffoldKey,
+              ),
             );
           },
         ),

@@ -39,7 +39,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#8B4513', '#E0E0E0']),
         ProductOption(name: 'Size', values: ['XS', 'S', 'M', 'L', 'XL', 'XXL']),
       ],
-      variants: ProductVariantHelper.generateVariants('1', ['#000000', '#8B4513', '#E0E0E0'], ['XS', 'S', 'M', 'L', 'XL', 'XXL'], 79.99),
+      variants: ProductVariantHelper.generateVariants(
+        '1',
+        ['#000000', '#8B4513', '#E0E0E0'],
+        ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+        79.99,
+      ),
     ),
     ProductModel(
       id: '2',
@@ -53,7 +58,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#E0E0E0', '#FFB6C1', '#87CEEB']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('2', ['#E0E0E0', '#FFB6C1', '#87CEEB'], ['S', 'M', 'L', 'XL'], 74.99),
+      variants: ProductVariantHelper.generateVariants(
+        '2',
+        ['#E0E0E0', '#FFB6C1', '#87CEEB'],
+        ['S', 'M', 'L', 'XL'],
+        74.99,
+      ),
     ),
     ProductModel(
       id: '3',
@@ -67,7 +77,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#FFFFFF', '#FF6B6B']),
         ProductOption(name: 'Size', values: ['M', 'L', 'XL', 'XXL']),
       ],
-      variants: ProductVariantHelper.generateVariants('3', ['#000000', '#FFFFFF', '#FF6B6B'], ['M', 'L', 'XL', 'XXL'], 89.99),
+      variants: ProductVariantHelper.generateVariants(
+        '3',
+        ['#000000', '#FFFFFF', '#FF6B6B'],
+        ['M', 'L', 'XL', 'XXL'],
+        89.99,
+      ),
     ),
     ProductModel(
       id: '4',
@@ -81,7 +96,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#8B7355', '#2F4F4F', '#696969']),
         ProductOption(name: 'Size', values: ['XS', 'S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('4', ['#8B7355', '#2F4F4F', '#696969'], ['XS', 'S', 'M', 'L', 'XL'], 84.99),
+      variants: ProductVariantHelper.generateVariants(
+        '4',
+        ['#8B7355', '#2F4F4F', '#696969'],
+        ['XS', 'S', 'M', 'L', 'XL'],
+        84.99,
+      ),
     ),
     ProductModel(
       id: '5',
@@ -95,7 +115,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#1E3A8A', '#2D3748']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL', 'XXL']),
       ],
-      variants: ProductVariantHelper.generateVariants('5', ['#000000', '#1E3A8A', '#2D3748'], ['S', 'M', 'L', 'XL', 'XXL'], 94.99),
+      variants: ProductVariantHelper.generateVariants(
+        '5',
+        ['#000000', '#1E3A8A', '#2D3748'],
+        ['S', 'M', 'L', 'XL', 'XXL'],
+        94.99,
+      ),
     ),
     ProductModel(
       id: '6',
@@ -109,7 +134,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#FFFFFF', '#4A5568']),
         ProductOption(name: 'Size', values: ['XS', 'S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('6', ['#000000', '#FFFFFF', '#4A5568'], ['XS', 'S', 'M', 'L', 'XL'], 79.99),
+      variants: ProductVariantHelper.generateVariants(
+        '6',
+        ['#000000', '#FFFFFF', '#4A5568'],
+        ['XS', 'S', 'M', 'L', 'XL'],
+        79.99,
+      ),
     ),
 
     // T-SHIRTS (6 products)
@@ -125,7 +155,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#FFFFFF', '#808080']),
         ProductOption(name: 'Size', values: ['XS', 'S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('7', ['#000000', '#FFFFFF', '#808080'], ['XS', 'S', 'M', 'L', 'XL'], 34.99),
+      variants: ProductVariantHelper.generateVariants(
+        '7',
+        ['#000000', '#FFFFFF', '#808080'],
+        ['XS', 'S', 'M', 'L', 'XL'],
+        34.99,
+      ),
     ),
     ProductModel(
       id: '8',
@@ -139,7 +174,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#8B4513', '#2F4F4F']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('8', ['#000000', '#8B4513', '#2F4F4F'], ['S', 'M', 'L', 'XL'], 39.99),
+      variants: ProductVariantHelper.generateVariants(
+        '8',
+        ['#000000', '#8B4513', '#2F4F4F'],
+        ['S', 'M', 'L', 'XL'],
+        39.99,
+      ),
     ),
     ProductModel(
       id: '9',
@@ -172,7 +212,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#1E3A8A', '#DC143C', '#228B22']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('10', ['#1E3A8A', '#DC143C', '#228B22'], ['S', 'M', 'L', 'XL'], 36.99),
+      variants: ProductVariantHelper.generateVariants(
+        '10',
+        ['#1E3A8A', '#DC143C', '#228B22'],
+        ['S', 'M', 'L', 'XL'],
+        36.99,
+      ),
     ),
     ProductModel(
       id: '11',
@@ -205,7 +250,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#FFFFFF', '#87CEEB', '#FFB6C1']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('12', ['#FFFFFF', '#87CEEB', '#FFB6C1'], ['S', 'M', 'L', 'XL'], 32.99),
+      variants: ProductVariantHelper.generateVariants(
+        '12',
+        ['#FFFFFF', '#87CEEB', '#FFB6C1'],
+        ['S', 'M', 'L', 'XL'],
+        32.99,
+      ),
     ),
 
     // JEANS (5 products)
@@ -214,14 +264,20 @@ class ProductConstants {
       name: 'Streetwise Denim',
       category: 'jeans',
       basePrice: 89.99,
-      imageUrl: 'https://images.unsplash.com/photo-1542272454315-7fbfabf99ccf?w=500',
+      imageUrl:
+          'https://rukminim2.flixcart.com/image/480/640/xif0q/jacket/b/n/k/l-1-no-jakt-denim-lgrey-01-urbano-fashion-original-imah6j9fqyprj3zc.jpeg?q=90',
       rating: 4.6,
       reviewCount: 89,
       options: const [
         ProductOption(name: 'Color', values: ['#1E3A8A', '#000000']),
         ProductOption(name: 'Size', values: ['28', '30', '32', '34', '36']),
       ],
-      variants: ProductVariantHelper.generateVariants('13', ['#1E3A8A', '#000000'], ['28', '30', '32', '34', '36'], 89.99),
+      variants: ProductVariantHelper.generateVariants(
+        '13',
+        ['#1E3A8A', '#000000'],
+        ['28', '30', '32', '34', '36'],
+        89.99,
+      ),
     ),
     ProductModel(
       id: '14',
@@ -235,7 +291,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#2F4F4F']),
         ProductOption(name: 'Size', values: ['28', '30', '32', '34', '36', '38']),
       ],
-      variants: ProductVariantHelper.generateVariants('14', ['#000000', '#2F4F4F'], ['28', '30', '32', '34', '36', '38'], 79.99),
+      variants: ProductVariantHelper.generateVariants(
+        '14',
+        ['#000000', '#2F4F4F'],
+        ['28', '30', '32', '34', '36', '38'],
+        79.99,
+      ),
     ),
     ProductModel(
       id: '15',
@@ -249,7 +310,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#1E3A8A', '#87CEEB']),
         ProductOption(name: 'Size', values: ['28', '30', '32', '34', '36']),
       ],
-      variants: ProductVariantHelper.generateVariants('15', ['#1E3A8A', '#87CEEB'], ['28', '30', '32', '34', '36'], 94.99),
+      variants: ProductVariantHelper.generateVariants(
+        '15',
+        ['#1E3A8A', '#87CEEB'],
+        ['28', '30', '32', '34', '36'],
+        94.99,
+      ),
     ),
     ProductModel(
       id: '16',
@@ -263,7 +329,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#1E3A8A', '#000000', '#696969']),
         ProductOption(name: 'Size', values: ['29', '30', '32', '34', '36']),
       ],
-      variants: ProductVariantHelper.generateVariants('16', ['#1E3A8A', '#000000', '#696969'], ['29', '30', '32', '34', '36'], 84.99),
+      variants: ProductVariantHelper.generateVariants(
+        '16',
+        ['#1E3A8A', '#000000', '#696969'],
+        ['29', '30', '32', '34', '36'],
+        84.99,
+      ),
     ),
     ProductModel(
       id: '17',
@@ -277,7 +348,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#4682B4', '#87CEEB']),
         ProductOption(name: 'Size', values: ['28', '30', '32', '34', '36']),
       ],
-      variants: ProductVariantHelper.generateVariants('17', ['#4682B4', '#87CEEB'], ['28', '30', '32', '34', '36'], 99.99),
+      variants: ProductVariantHelper.generateVariants(
+        '17',
+        ['#4682B4', '#87CEEB'],
+        ['28', '30', '32', '34', '36'],
+        99.99,
+      ),
     ),
 
     // SWEATPANTS (5 products)
@@ -293,7 +369,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#1E3A8A', '#000000', '#E0E0E0']),
         ProductOption(name: 'Size', values: ['XS', 'S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('18', ['#1E3A8A', '#000000', '#E0E0E0'], ['XS', 'S', 'M', 'L', 'XL'], 64.99),
+      variants: ProductVariantHelper.generateVariants(
+        '18',
+        ['#1E3A8A', '#000000', '#E0E0E0'],
+        ['XS', 'S', 'M', 'L', 'XL'],
+        64.99,
+      ),
     ),
     ProductModel(
       id: '19',
@@ -307,7 +388,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#2F4F4F', '#8B7355']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL', 'XXL']),
       ],
-      variants: ProductVariantHelper.generateVariants('19', ['#000000', '#2F4F4F', '#8B7355'], ['S', 'M', 'L', 'XL', 'XXL'], 69.99),
+      variants: ProductVariantHelper.generateVariants(
+        '19',
+        ['#000000', '#2F4F4F', '#8B7355'],
+        ['S', 'M', 'L', 'XL', 'XXL'],
+        69.99,
+      ),
     ),
     ProductModel(
       id: '20',
@@ -321,7 +407,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#1E3A8A', '#DC143C']),
         ProductOption(name: 'Size', values: ['XS', 'S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('20', ['#000000', '#1E3A8A', '#DC143C'], ['XS', 'S', 'M', 'L', 'XL'], 59.99),
+      variants: ProductVariantHelper.generateVariants(
+        '20',
+        ['#000000', '#1E3A8A', '#DC143C'],
+        ['XS', 'S', 'M', 'L', 'XL'],
+        59.99,
+      ),
     ),
     ProductModel(
       id: '21',
@@ -335,7 +426,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#696969', '#000000', '#E0E0E0']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('21', ['#696969', '#000000', '#E0E0E0'], ['S', 'M', 'L', 'XL'], 54.99),
+      variants: ProductVariantHelper.generateVariants(
+        '21',
+        ['#696969', '#000000', '#E0E0E0'],
+        ['S', 'M', 'L', 'XL'],
+        54.99,
+      ),
     ),
     ProductModel(
       id: '22',
@@ -370,7 +466,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#1E3A8A', '#A0522D', '#000000']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('23', ['#1E3A8A', '#A0522D', '#000000'], ['S', 'M', 'L', 'XL'], 99.99),
+      variants: ProductVariantHelper.generateVariants(
+        '23',
+        ['#1E3A8A', '#A0522D', '#000000'],
+        ['S', 'M', 'L', 'XL'],
+        99.99,
+      ),
     ),
     ProductModel(
       id: '24',
@@ -384,7 +485,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#2F4F4F', '#8B4513']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL', 'XXL']),
       ],
-      variants: ProductVariantHelper.generateVariants('24', ['#000000', '#2F4F4F', '#8B4513'], ['S', 'M', 'L', 'XL', 'XXL'], 119.99),
+      variants: ProductVariantHelper.generateVariants(
+        '24',
+        ['#000000', '#2F4F4F', '#8B4513'],
+        ['S', 'M', 'L', 'XL', 'XXL'],
+        119.99,
+      ),
     ),
     ProductModel(
       id: '25',
@@ -431,7 +537,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#1E3A8A', '#DC143C']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL', 'XXL']),
       ],
-      variants: ProductVariantHelper.generateVariants('27', ['#000000', '#1E3A8A', '#DC143C'], ['S', 'M', 'L', 'XL', 'XXL'], 79.99),
+      variants: ProductVariantHelper.generateVariants(
+        '27',
+        ['#000000', '#1E3A8A', '#DC143C'],
+        ['S', 'M', 'L', 'XL', 'XXL'],
+        79.99,
+      ),
     ),
 
     // SHORTS (4 products)
@@ -447,7 +558,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#8B7355', '#000000', '#2F4F4F']),
         ProductOption(name: 'Size', values: ['28', '30', '32', '34', '36']),
       ],
-      variants: ProductVariantHelper.generateVariants('28', ['#8B7355', '#000000', '#2F4F4F'], ['28', '30', '32', '34', '36'], 49.99),
+      variants: ProductVariantHelper.generateVariants(
+        '28',
+        ['#8B7355', '#000000', '#2F4F4F'],
+        ['28', '30', '32', '34', '36'],
+        49.99,
+      ),
     ),
     ProductModel(
       id: '29',
@@ -480,7 +596,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#1E3A8A', '#87CEEB', '#000000']),
         ProductOption(name: 'Size', values: ['28', '30', '32', '34']),
       ],
-      variants: ProductVariantHelper.generateVariants('30', ['#1E3A8A', '#87CEEB', '#000000'], ['28', '30', '32', '34'], 44.99),
+      variants: ProductVariantHelper.generateVariants(
+        '30',
+        ['#1E3A8A', '#87CEEB', '#000000'],
+        ['28', '30', '32', '34'],
+        44.99,
+      ),
     ),
     ProductModel(
       id: '31',
@@ -515,7 +636,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#1E3A8A', '#DC143C', '#E0E0E0']),
         ProductOption(name: 'Size', values: ['One Size']),
       ],
-      variants: ProductVariantHelper.generateVariants('32', ['#000000', '#1E3A8A', '#DC143C', '#E0E0E0'], ['One Size'], 24.99),
+      variants: ProductVariantHelper.generateVariants(
+        '32',
+        ['#000000', '#1E3A8A', '#DC143C', '#E0E0E0'],
+        ['One Size'],
+        24.99,
+      ),
     ),
     ProductModel(
       id: '33',
@@ -557,7 +683,12 @@ class ProductConstants {
         ProductOption(name: 'Color', values: ['#000000', '#8B4513', '#A0522D']),
         ProductOption(name: 'Size', values: ['S', 'M', 'L', 'XL']),
       ],
-      variants: ProductVariantHelper.generateVariants('35', ['#000000', '#8B4513', '#A0522D'], ['S', 'M', 'L', 'XL'], 39.99),
+      variants: ProductVariantHelper.generateVariants(
+        '35',
+        ['#000000', '#8B4513', '#A0522D'],
+        ['S', 'M', 'L', 'XL'],
+        39.99,
+      ),
     ),
   ];
 

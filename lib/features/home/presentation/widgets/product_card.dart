@@ -99,14 +99,16 @@ class _ProductCardState extends State<ProductCard> {
                       text: 'Add to Cart',
                     ),
 
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                        color: AppColors.gray100,
-                        image: DecorationImage(
-                          image: CachedNetworkImageProvider(widget.product.imageUrl),
-                          fit: BoxFit.cover,
-                        ),
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(16),
+                        topRight: Radius.circular(16),
+                      ),
+                      child: CachedNetworkImage(
+                        width: double.infinity,
+                        height: double.infinity,
+                        imageUrl: widget.product.imageUrl,
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
