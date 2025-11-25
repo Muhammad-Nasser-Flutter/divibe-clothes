@@ -25,7 +25,7 @@ class DefaultDialog extends StatelessWidget {
       ),
       contentPadding: EdgeInsets.symmetric(
         horizontal: contentHorizontallPadding ?? 16,
-        vertical: 24,
+        vertical: 12,
       ),
       content: SizedBox(width: 320, child: content),
       title: title,

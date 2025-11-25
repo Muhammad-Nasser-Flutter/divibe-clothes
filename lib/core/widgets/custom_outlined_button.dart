@@ -43,21 +43,22 @@ class CustomOutlinedButton extends StatelessWidget {
     return ScaleWidget(
       opacityChangable: opacityChangable,
       scalable: scalable,
-      onTap: onPressed,
       scaleValue: scaleValue,
       angleValue: angleValue,
       opacityValue: opacityValue,
       child: OutlinedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: OutlinedButton.styleFrom(
           foregroundColor: foregroundColor,
           padding: padding,
+          backgroundColor: backgroundColor,
           side: BorderSide(color: borderColor),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           spacing: spacing,
           children: [
             ?prefixIcon,

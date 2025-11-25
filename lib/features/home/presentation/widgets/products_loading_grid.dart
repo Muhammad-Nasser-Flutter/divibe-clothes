@@ -1,7 +1,7 @@
 import 'package:cloth_ecommerce/core/constants/product_constants.dart';
 import 'package:cloth_ecommerce/core/widgets/fade_in_widget.dart';
 import 'package:cloth_ecommerce/core/widgets/skeletonizer_widget.dart';
-import 'package:cloth_ecommerce/features/home/presentation/widgets/product_card.dart';
+import 'package:cloth_ecommerce/features/home/presentation/widgets/product_widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 /// Loading state widget with skeleton loaders
@@ -30,7 +30,7 @@ class ProductsLoadingGrid extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
             crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
+            mainAxisSpacing: 32,
             mainAxisExtent: 600,
           ),
           itemCount: sampleProducts.length,

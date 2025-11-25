@@ -32,6 +32,7 @@ class ProductVariant {
   final double price;
   final int stock;
   final String sku;
+  final String imageUrl; 
 
   const ProductVariant({
     required this.id,
@@ -39,6 +40,7 @@ class ProductVariant {
     required this.price,
     required this.stock,
     required this.sku,
+    required this.imageUrl,
   });
 
   bool get isInStock => stock > 0;
@@ -52,6 +54,7 @@ class ProductVariant {
       price: (json['price'] as num).toDouble(),
       stock: json['stock'] as int,
       sku: json['sku'] as String,
+      imageUrl: json['imageUrl'] as String,
     );
   }
 
@@ -63,6 +66,7 @@ class ProductVariant {
       'price': price,
       'stock': stock,
       'sku': sku,
+      'imageUrl': imageUrl,
     };
   }
 }
@@ -74,7 +78,9 @@ class ProductModel {
   final double basePrice;
   final List<ProductOption> options;
   final List<ProductVariant> variants;
-  final String imageUrl;
+  final String imageUrl; // Legacy field, kept for backward compatibility
+  final String? mainImageUrl; // Main product image
+  final String? description; // Product description
   final double rating;
   final int reviewCount;
 
@@ -86,6 +92,8 @@ class ProductModel {
     required this.options,
     required this.variants,
     required this.imageUrl,
+    this.mainImageUrl,
+    this.description,
     required this.rating,
     required this.reviewCount,
   });
@@ -129,6 +137,8 @@ class ProductModel {
       category: json['category'] as String,
       basePrice: (json['basePrice'] as num).toDouble(),
       imageUrl: json['imageUrl'] as String,
+      mainImageUrl: json['mainImageUrl'] as String?,
+      description: json['description'] as String?,
       rating: (json['rating'] as num).toDouble(),
       reviewCount: json['reviewCount'] as int,
       options: (json['options'] as List<dynamic>)
@@ -148,6 +158,8 @@ class ProductModel {
       'category': category,
       'basePrice': basePrice,
       'imageUrl': imageUrl,
+      'mainImageUrl': mainImageUrl,
+      'description': description,
       'rating': rating,
       'reviewCount': reviewCount,
       'options': options.map((e) => e.toJson()).toList(),

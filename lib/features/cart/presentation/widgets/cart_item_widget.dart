@@ -3,15 +3,14 @@ import 'package:cloth_ecommerce/core/helpers/color_helper.dart';
 import 'package:cloth_ecommerce/core/theming/colors.dart';
 import 'package:cloth_ecommerce/core/theming/text_theme_extension.dart';
 import 'package:cloth_ecommerce/core/widgets/scale_widget.dart';
-import 'package:cloth_ecommerce/features/cart/bloc/cart_bloc.dart';
-import 'package:cloth_ecommerce/features/cart/bloc/cart_event.dart';
+import 'package:cloth_ecommerce/features/cart/presentation/providers/cart_provider.dart';
 import 'package:cloth_ecommerce/features/cart/data/models/cart_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/gg.dart';
 
-class CartItemWidget extends StatelessWidget {
+class CartItemWidget extends ConsumerWidget {
   final CartItemModel item;
 
   const CartItemWidget({
@@ -29,8 +28,7 @@ class CartItemWidget extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final cartBloc = context.read<CartBloc>();
+  Widget build(BuildContext context, WidgetRef ref) {
     final canIncrease = item.quantity < item.variant.stock;
 
     return Container(
@@ -40,8 +38,6 @@ class CartItemWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.gray100,
         borderRadius: BorderRadius.circular(12),
-
-        // border: Border.all(color: AppColors.gray200),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -104,7 +100,7 @@ class CartItemWidget extends StatelessWidget {
                           padding: EdgeInsets.zero,
                           icon: const Icon(Icons.remove, size: 16),
                           onPressed: () {
-                            cartBloc.add(DecreaseQuantity(item));
+                            ref.read(cartNotifierProvider.notifier).decreaseQuantity(item);
                           },
                         ),
                       ),
@@ -125,7 +121,6 @@ class CartItemWidget extends StatelessWidget {
                         width: 32,
                         height: 32,
                         decoration: BoxDecoration(
-                          // borderRadius: BorderRadius.circular(6),
                           shape: BoxShape.circle,
                           color: canIncrease ? AppColors.pureWhite : AppColors.gray100,
                         ),
@@ -138,7 +133,7 @@ class CartItemWidget extends StatelessWidget {
                           ),
                           onPressed: canIncrease
                               ? () {
-                                  cartBloc.add(IncreaseQuantity(item));
+                                  ref.read(cartNotifierProvider.notifier).increaseQuantity(item);
                                 }
                               : null,
                         ),
@@ -165,7 +160,7 @@ class CartItemWidget extends StatelessWidget {
                     size: 20,
                   ),
                   onPressed: () {
-                    cartBloc.add(RemoveFromCart(item));
+                    ref.read(cartNotifierProvider.notifier).removeFromCart(item);
                   },
                 ),
               ),

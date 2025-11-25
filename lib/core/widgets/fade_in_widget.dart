@@ -13,20 +13,15 @@ class FadeInWidget extends HookWidget {
     final opacity = useState<double>(0.4);
     final currentOffset = useState<Offset>(offsetFromValue ?? Offset.zero);
 
-    useEffect(() {
-      Future.delayed(Duration.zero, () {
-        opacity.value = 1.0;
-        currentOffset.value = Offset.zero;
-      });
-      return null;
-    }, const []);
-
+    Future.delayed(const Duration(milliseconds: 500), () {
+      opacity.value = 1.0;
+      currentOffset.value = Offset.zero;
+    });
     return AnimatedContainer(
       duration: duration ?? const Duration(milliseconds: 300),
       transform: Matrix4.translationValues(currentOffset.value.dx, currentOffset.value.dy, 0),
       curve: Curves.easeOutCubic,
       child: AnimatedOpacity(
-
         opacity: opacity.value,
         duration: duration ?? const Duration(milliseconds: 300),
         child: child,

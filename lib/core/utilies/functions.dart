@@ -53,21 +53,19 @@ void openMapsWithDirection({
   }
 }
 
-Future<void> goToHomeSection(GlobalKey key) async {
-  // final context = key.currentContext!;
-  // final currentRoute = GoRouterState.of(context).matchedLocation;
-  // if (currentRoute == '/' || currentRoute == '/home') {
+Future<void> goToHomeSection(BuildContext context, GlobalKey key) async {
+  final currentRoute = GoRouterState.of(context).matchedLocation;
+  if (currentRoute == '/' || currentRoute == '/home') {
     // Scroll to section
     _scrollToSection(key);
-  // }
-  //  else {
-  //   // Navigate to home first, then scroll
-  //   context.goNamed(Routes.homeRoute);
-  //   // Delay to allow navigation to complete
-  //   Future.delayed(const Duration(milliseconds: 2000), () {
-  //     _scrollToSection(key);
-  //   });
-  // }
+  } else {
+    // Navigate to home first, then scroll
+    context.goNamed(Routes.homeRoute);
+    // Delay to allow navigation to complete
+    Future.delayed(const Duration(milliseconds: 500), () {
+      _scrollToSection(key);
+    });
+  }
 }
 
 void _scrollToSection(GlobalKey key) {

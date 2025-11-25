@@ -20,7 +20,7 @@ class CategoryChips extends StatelessWidget {
     // Update category using Riverpod - this is instant
     ref.read(selectedCategoryProvider.notifier).state = category;
 
-    goToHomeSection(HomeScreen.productsKey);
+    goToHomeSection(ref.context, HomeScreen.productsKey);
   }
 
   @override

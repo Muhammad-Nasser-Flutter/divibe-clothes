@@ -2,6 +2,7 @@ class Routes {
   // main routes
   static const String mainLayoutRoute = '/main_layout';
   static const String homeRoute = '/home';
+  static const String productDetailsRoute = '/product/:id';
   static const String appointmentsRoute = '/appointments';
   static const String reportsRoute = '/reports';
   static const String profileRoute = '/profile';

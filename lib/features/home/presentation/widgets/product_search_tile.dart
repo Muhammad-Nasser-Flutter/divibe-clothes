@@ -3,6 +3,7 @@ import 'package:cloth_ecommerce/core/theming/colors.dart';
 import 'package:cloth_ecommerce/core/theming/text_theme_extension.dart';
 import 'package:cloth_ecommerce/features/home/data/models/product_model.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 /// Compact product tile for search results
 class ProductSearchTile extends StatefulWidget {
@@ -28,7 +29,13 @@ class _ProductSearchTileState extends State<ProductSearchTile> {
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
       child: GestureDetector(
-        onTap: widget.onTap,
+        onTap: () {
+          if (widget.onTap != null) {
+            widget.onTap!();
+          } else {
+            context.go('/product/${widget.product.id}');
+          }
+        },
         child: Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(

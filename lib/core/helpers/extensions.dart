@@ -1,6 +1,5 @@
 import 'package:cloth_ecommerce/core/cache_helper/cache_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:cloth_ecommerce/core/helpers/date_format.dart';
 import 'package:cloth_ecommerce/core/helpers/enums.dart';
@@ -287,5 +286,31 @@ extension IntToTimerDaysMinutesSeconds on int {
     final minutes = (this ~/ 60) % 60;
     final seconds = this % 60;
     return "$days:$hours:$minutes:$seconds";
+  }
+}
+
+extension ColorParsing on String {
+  /// Converts a hex color string to a Color object
+  /// Supports formats: '#RRGGBB', 'RRGGBB', '#RGB', 'RGB'
+  /// Returns black if the string is not parsable
+  Color toColor() {
+    try {
+      String hex = replaceAll('#', '');
+
+      // Handle short format (#RGB -> #RRGGBB)
+      if (hex.length == 3) {
+        hex = hex.split('').map((char) => char + char).join();
+      }
+
+      // Add alpha channel if not present
+      if (hex.length == 6) {
+        hex = 'FF$hex';
+      }
+
+      return Color(int.parse(hex, radix: 16));
+    } catch (e) {
+      // Return black if parsing fails
+      return Colors.black;
+    }
   }
 }

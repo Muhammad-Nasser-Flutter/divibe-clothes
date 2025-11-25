@@ -3,8 +3,8 @@ import 'package:cloth_ecommerce/core/widgets/el_mostashfa_loading.dart';
 import 'package:cloth_ecommerce/core/widgets/fade_in_widget.dart';
 import 'package:cloth_ecommerce/features/home/data/models/product_model.dart';
 import 'package:cloth_ecommerce/features/home/presentation/providers/products_provider.dart';
-import 'package:cloth_ecommerce/features/home/presentation/widgets/product_card.dart';
-import 'package:cloth_ecommerce/features/home/presentation/widgets/products_empty_state.dart';
+import 'package:cloth_ecommerce/features/home/presentation/widgets/product_widgets/product_card.dart';
+import 'package:cloth_ecommerce/features/home/presentation/widgets/product_widgets/products_empty_state.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -39,7 +39,7 @@ class ProductsGrid extends ConsumerWidget {
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4,
               crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
+              mainAxisSpacing: 32,
               mainAxisExtent: 600,
             ),
             itemCount: products.length,

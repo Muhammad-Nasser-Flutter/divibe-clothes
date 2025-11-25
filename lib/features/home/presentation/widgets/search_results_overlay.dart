@@ -177,9 +177,6 @@ class SearchResultsOverlay extends ConsumerWidget {
               itemBuilder: (context, index) {
                 return ProductSearchTile(
                   product: results[index],
-                  onTap: () {
-                    debugPrint('Tapped on product: ${results[index].name}');
-                  },
                 );
               },
             ),

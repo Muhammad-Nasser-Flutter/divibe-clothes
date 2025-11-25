@@ -120,7 +120,7 @@ class HeroSection extends StatelessWidget {
                 duration: const Duration(milliseconds: 1100),
                 child: CustomElevatedButton(
                   onPressed: () {
-                    goToHomeSection(HomeScreen.productsKey);
+                    goToHomeSection(context, HomeScreen.productsKey);
                   },
                   text: 'Shop Now',
                   suffixIcon: const AnimatableIcon(

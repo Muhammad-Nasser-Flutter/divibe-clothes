@@ -45,7 +45,6 @@ class CustomElevatedButton extends HookWidget {
     return ScaleWidget(
       opacityChangable: opacityChangable,
       scalable: scalable,
-      onTap: onPressed,
       scaleValue: scaleValue,
       angleValue: angleValue,
       opacityValue: opacityValue,
